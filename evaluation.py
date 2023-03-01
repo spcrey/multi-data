@@ -160,13 +160,13 @@ def export_video(args, channel_list, res_dict, hres, lres, dataset, interp_data)
 
     # crey's create: edge sampling for evaluation
 
-    # if args.edge_sampling_mode == True:
+    if args.edge_sampling_mode == True:
 
-    #     for channel_index, channel_name in enumerate(phys_channels):
-    #         if channel_name == "rho":
-    #             pred[channel_index][interp_data[1]==0] = 1000.0
-    #         else:
-    #             pred[channel_index][interp_data[1]==0] = 0.0
+        for channel_index, channel_name in enumerate(phys_channels):
+            if channel_name == "rho":
+                pred[channel_index][interp_data[1]==0] = 1000.0
+            else:
+                pred[channel_index][interp_data[1]==0] = 0.0
 
     # end crey
 

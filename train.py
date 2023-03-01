@@ -339,7 +339,7 @@ def get_args():
     parser.add_argument('--channels', type=str, default="p, b, u, w")
     parser.add_argument('--equation_dir', type=str, default="./data/equations.json")
     parser.add_argument("--interval_string", type=str, default="    ", dest="interval_string")
-    parser.add_argument("--edge_sampling_mode", action='store_false')
+    parser.add_argument("--edge_sampling_mode", action='store_true')
 
     # end crey
 
