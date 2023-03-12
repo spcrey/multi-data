@@ -28,7 +28,7 @@ from physics import crey_get_rb2_pde_layer
 
 # pylint: disable=no-member
 
-# os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 def loss_functional(loss_type):
     """Get loss function given function type names."""
@@ -112,7 +112,6 @@ def train(args, unet, imnet, train_loader, epoch, global_step, device,
         sum_loss_sum += loss.item() * batch_size
 
         # end crey
-
 
         # crey's create: control show with training 1/3
 
@@ -374,7 +373,7 @@ def main():
 
     # 变量表
     args.variable_values = {
-        "nt": 1 / (500.0 * args.nt),
+        "nt": 1 / (1.0 * args.nt),
         "nx": 1 / (1.0 * args.nx),
         "nz": 1 / (1.0 * args.nz),
     } 

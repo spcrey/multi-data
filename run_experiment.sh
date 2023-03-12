@@ -1,7 +1,7 @@
 #!/bin/bash  
 
 python train.py\
- --epochs=108 --data_folder=data --log_dir=./log/exp13-right-ditance\
+ --epochs=108 --data_folder=data --log_dir=./log/exp14-right-ditance-2\
  --alpha_pde=0.0125 --train_data=yuan_suitable_data.npz --eval_data=yuan_suitable_data_eval.npz\
  --rayleigh=1000000 --prandtl=1 --nonlin=softplus --batch_size_per_gpu=8\
  --n_samp_pts_per_crop=512 --use_continuity=true --pseudo_epoch_size=6000\
